@@ -1,0 +1,14 @@
+Flask==0.10.1
+Flask-SQLAlchemy==1.0
+Jinja2==2.7.3
+MarkupSafe==0.23
+SQLAlchemy==0.9.6
+Werkzeug==0.9.6
+amqp==1.4.5
+anyjson==0.3.3
+billiard==3.3.0.18
+celery==3.1.13
+itsdangerous==0.24
+kombu==3.0.21
+pytz==2014.4
+wsgiref==0.1.2
