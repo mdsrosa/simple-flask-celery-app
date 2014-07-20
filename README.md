@@ -1,4 +1,4 @@
 simple-flask-celery-app
 =======================
 
-Aplicação simples em Flask usanod Celery e SQLAlchemy
+Aplicação simples em Flask usando Celery e SQLAlchemy
