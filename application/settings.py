@@ -3,6 +3,7 @@ __author__ = 'matheusrosa'
 from application import app
 import os
 
+# configuracoes para a aplicacoa flasks
 DATABASE = os.path.join(app.root_path, '../app.db')
 DEBUG = True
 SECRET_KEY = 'development key'
@@ -10,7 +11,7 @@ USERNAME = 'admin'
 PASSWORD = 'default'
 
 
-# celery configs
+# configuracoes para o celery
 CELERY_DEFAULT_QUEUE = 'simple-flask-celery-app'
 CELERY_DEFAULT_EXCHANGE = 'simple-flask-celery-app'
 CELERY_DEFAULT_ROUTING_KEY = 'simple-flask-celery-app'

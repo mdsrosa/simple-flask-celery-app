@@ -6,6 +6,12 @@ logger = get_task_logger(__name__)
 
 @celery.task
 def add_entry_task(title, text):
+    """
+    Definicao da task para salvar um novo post
+    :param title: titulo do post
+    :param text: conteudo do post
+    :return: None
+    """
     with app.app_context():
         logger.info('Processing add_entry_task....')
         db = get_db()
