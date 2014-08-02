@@ -1,8 +1,9 @@
 __author__ = 'matheusrosa'
 from flask import session, request, abort, flash, render_template, redirect, \
     url_for
-from application import app, get_db
+from application import app
 from application.tasks import add_entry_task
+from application.models import Entry
 
 
 @app.route('/')
@@ -11,9 +12,7 @@ def show_entries():
     Lista todos os posts
     :return:
     """
-    db = get_db()
-    cur = db.execute('select title, text from entries order by id asc')
-    entries = cur.fetchall()
+    entries = Entry.query.all()
     return render_template('show_entries.html', entries=entries,
                            title=u'My Entries')
 
@@ -40,7 +39,6 @@ def login():
     :return: function
     """
     error = None
-    import ipdb; ipdb.set_trace()  # BREAKPOINT
     if request.method == 'POST':
         if request.form['username'] != app.config['USERNAME']:
             error = 'Invalid username'

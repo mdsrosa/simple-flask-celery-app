@@ -14,4 +14,4 @@ celery.add_defaults(app.config)
 db = SQLAlchemy(app)
 db.init_app(app)
 
-# import application.views
+import application.views
