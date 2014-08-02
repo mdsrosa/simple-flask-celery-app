@@ -40,6 +40,7 @@ def login():
     :return: function
     """
     error = None
+    import ipdb; ipdb.set_trace()  # BREAKPOINT
     if request.method == 'POST':
         if request.form['username'] != app.config['USERNAME']:
             error = 'Invalid username'
